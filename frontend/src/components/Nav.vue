@@ -1,32 +1,20 @@
 <template>
    <!-- nav bar start  -->
-
-   <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link "  href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Recipe</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link"  >Login/SignUp</a>
-          </li>
-        </ul>
-      </div>
+   <div id="main">
+    <div id="img">
+      <p>Yummy</p>
     </div>
-  </nav>
 
-   <!-- nav bar end  -->
+    <div id="menu">
+    <div>Home</div>
+    <div>Recipe</div>
+    <div><a href="/sign">Sign In</a></div>
+    <div><a href="/login">Sign Up</a></div>
+ 
+  </div>
+
+   </div>
+     <!-- nav bar end  -->
    
 
 </template>
@@ -42,15 +30,39 @@ export default{
 
 
 <style scoped>
+#main{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ 
+  background-color: rgb(9, 43, 9);
+  color: white;
+}
+
+#img{
+width: 40%;
+display: flex;
+align-items: center;
+margin-left: 60px;
+margin-top: 10px;
+
+}
+#img>p{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#menu{
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px;
+}
 
 
-li{
-    margin-left: 70px;
-    font-size: 18px;
-    
-}
-li>a{
-    color: blue;
-}
 
 </style>
