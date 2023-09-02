@@ -2,14 +2,14 @@
    
    <div id="loginDiv">
     
-    <form>
+    <form @submit.prevent="registerUser">
         <h3>Login Here</h3>
 
         <label for="username">Username</label>
-        <input type="text" placeholder="Email or Phone" id="username">
+        <input type="text" placeholder="Email or Phone" id="username" v-model="username">
 
         <label for="password">Password</label>
-        <input type="password" placeholder="Password" id="password">
+        <input type="password" placeholder="Password" id="password" v-model="password">
 
         <button>Log In</button>
         <div class="social">
@@ -24,17 +24,52 @@
 </div>
     </template>
     
-    
+        
     <script>
 
-   
 
-    export default {
-        name : "LoginPage"
-  
+import axios from 'axios';
+export default {
+    name : "LoginPage",
+
+    data() {
+    return {
+      username: '',
+      password: '',
+    };
+  },
+  methods: {
+    registerUser() {
+      // Create an object with the user data
+      const userData = {
+        username: this.username,
+        password: this.password,
+      };
+
+      axios.post('http://localhost:8000/login/', userData)
+        .then((response) => {
+          console.log('User Login successfully:', response.data);
+
+          if(response.data.message == "Login successful"){
+            alert("Login Successfully")
+          }else{
+            alert("Something Went Wrong")
+            alert("Please Sign in first")
+          }
+         
+          // You can handle the response as needed
+        })
+        .catch((error) => {
+          console.error('Error Login user:', error);
+          alert("Please Sign in first")
+        });
     }
-    </script>
-    
+}
+}
+
+
+</script>
+
     
 
   

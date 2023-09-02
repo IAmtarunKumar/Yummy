@@ -2,14 +2,18 @@
    <!-- nav bar start  -->
    <div id="main">
     <div id="img">
-      <p>Yummy</p>
+      <img src="https://uploads-ssl.webflow.com/5966ea9a9217ca534caf139f/596d33f36607b12cfdaf8ad2_LogoWhite.png" alt="" width="40" class="failory-logo-image"><span>
+        <h4>Yummy</h4>
+      </span>
+      
     </div>
 
     <div id="menu">
-    <div>Home</div>
-    <div>Recipe</div>
+    <div><a href="/">Home</a></div>
+    <div><a href="/recipe">Recipe</a></div>
     <div><a href="/sign">Sign In</a></div>
     <div><a href="/login">Sign Up</a></div>
+    <div><a href="/Community">Community</a></div>
  
   </div>
 
@@ -63,6 +67,11 @@ margin-top: 10px;
   padding: 10px;
 }
 
+#menu>div>a{
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
 
 
 </style>

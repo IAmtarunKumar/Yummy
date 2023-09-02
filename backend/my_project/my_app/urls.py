@@ -3,13 +3,12 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('users/', views.task_list, name='task_list'),
-    path('register/', views.userRegister, name='register'),
-    path('login/',views.login , name='login'),
-    path('recipe/',views.showRecipe , name='showRecipe'),
-    path('addRecipe/',views.addRecipe , name='addRecipe')
+    path('register/', views.user_register, name='user_register'),
+    path('login/', views.user_login, name='user_login'),
+    path('logout/', views.user_logout, name='user_logout'),
 
+    path('data/', views.data, name='data'),
 
-    # path('tasks/<int:task_id>/', views.task_detail, name='task_detail'),
-    # path('login/',views.login , name='login')
+    # path('recipe/', views.showRecipe, name='showRecipe'),
+    # path('addRecipe/', views.addRecipe, name='addRecipe'),
 ]
