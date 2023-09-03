@@ -22,6 +22,7 @@
             <router-link to="/login">I am already member</router-link>
         </form>
 
+       p
     </div>
 </template>
      
@@ -30,6 +31,7 @@
 
 
 import axios from 'axios';
+import Swal from 'sweetalert2';
 export default {
     name: "SignInPage",
 
@@ -38,8 +40,10 @@ export default {
             username: '',
             email: '',
             password: '',
+
         };
     },
+   
     methods: {
         registerUser() {
             // Create an object with the user data
@@ -52,15 +56,25 @@ export default {
             axios.post('http://localhost:8000/register/', userData)
                 .then((response) => {
                     console.log('User registered successfully:', response.data);
-                    alert("Successfully")
+                    Swal.fire({
+                        position: 'center',
+                        icon: 'success',
+                        title: 'Sign In Successfully ',
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                    this.$router.push('/login');
                     // You can handle the response as needed
                 })
                 .catch((error) => {
                     console.error('Error registering user:', error);
                 });
         }
+
+      
     }
 }
+
 
 
 </script>

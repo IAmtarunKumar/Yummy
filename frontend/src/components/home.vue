@@ -5,9 +5,9 @@
     
     <div class="slider-container">
         <div class="slider">
-          <div class="slide"><img src="https://source.unsplash.com/1500x400/?food" alt="Image 1"></div>
-          <div class="slide"><img src="https://source.unsplash.com/1500x400/?pizza" alt="Image 2"></div>
-          <div class="slide"><img src="https://source.unsplash.com/1500x400/?burger" alt="Image 3"></div>
+          <div class="slide"><img src="../img/burgur.jpeg" alt="Image 1"></div>
+          <div class="slide"><img src="../img/daal.jpeg" alt="Image 2"></div>
+          <div class="slide"><img src="../img/sweet.jpeg" alt="Image 3"></div>
         </div>
       </div>
       <hr>

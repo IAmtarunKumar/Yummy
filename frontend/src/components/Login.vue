@@ -29,6 +29,7 @@
 
 
 import axios from 'axios';
+import Swal from 'sweetalert2';
 export default {
     name : "LoginPage",
 
@@ -49,9 +50,17 @@ export default {
       axios.post('http://localhost:8000/login/', userData)
         .then((response) => {
           console.log('User Login successfully:', response.data);
-
+          let token_user = {"token" : response.data.token , "username" : response.data.username}
           if(response.data.message == "Login successful"){
-            alert("Login Successfully")
+            localStorage.setItem("data" ,JSON.stringify(token_user) )
+            Swal.fire({
+                        position: 'center',
+                        icon: 'success',
+                        title: 'Login Successfully ',
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+            this.$router.push('/')
           }else{
             alert("Something Went Wrong")
             alert("Please Sign in first")

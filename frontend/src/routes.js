@@ -9,6 +9,7 @@ import SignIn from './components/Sign.vue'
 import Home from './components/home.vue'
 import Recipe from './components/Recipe.vue'
 import Community from './components/community.vue'
+import Logout from './components/Logout.vue'
 
 const routes = [
     {
@@ -36,6 +37,11 @@ const routes = [
         name : "Community",
         path : "/community",
         component : Community
+    },
+    {
+        name : "Logout",
+        path : "/logout",
+        component : Logout
     }
    
 ]

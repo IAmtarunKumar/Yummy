@@ -133,7 +133,7 @@
     border-width: 0;
     box-sizing: border-box;
     display: inline-block;
-    float: left;
+   
     max-width: 100%;
     vertical-align: middle;
   }

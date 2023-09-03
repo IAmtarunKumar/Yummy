@@ -11,9 +11,11 @@
     <div id="menu">
     <div><a href="/">Home</a></div>
     <div><a href="/recipe">Recipe</a></div>
-    <div><a href="/sign">Sign In</a></div>
-    <div><a href="/login">Sign Up</a></div>
+   
+    
     <div><a href="/Community">Community</a></div>
+    <div><a href="/login">Login</a></div>
+    <div><a href="/logout">Logout</a></div>
  
   </div>
 
