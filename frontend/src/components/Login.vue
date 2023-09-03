@@ -131,7 +131,7 @@ label {
   display: block;
   margin-top: 30px;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 501;
 }
 
 input {
