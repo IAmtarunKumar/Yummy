@@ -4,6 +4,7 @@
 
     
     <div class="slider-container">
+      <hr>
         <div class="slider">
           <div class="slide"><img src="../img/burgur.jpeg" alt="Image 1"></div>
           <div class="slide"><img src="../img/daal.jpeg" alt="Image 2"></div>
