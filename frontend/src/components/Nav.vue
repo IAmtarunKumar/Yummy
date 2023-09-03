@@ -1,31 +1,30 @@
 <template>
-   <!-- nav  start  -->
-   <div id="main">
+  <!-- nav  start  -->
+  <div id="main">
     <div id="img">
-      <img src="https://uploads-ssl.webflow.com/5966ea9a9217ca534caf139f/596d33f36607b12cfdaf8ad2_LogoWhite.png" alt="" width="40" class="failory-logo-image"><span>
+      <img src="https://uploads-ssl.webflow.com/5966ea9a9217ca534caf139f/596d33f36607b12cfdaf8ad2_LogoWhite.png" alt=""
+        width="40" class="failory-logo-image"><span>
         <h4>Yummy</h4>
       </span>
-      
+
     </div>
 
     <div id="menu">
-    <div><a href="/">Home</a></div>
-    <div><a href="/recipe">Recipe</a></div>
-   
-    
-    <div><a href="/Community">Community</a></div>
-    <div><a href="/login">Login</a></div>
-    <div><a href="/logout">Logout</a></div> 
-  </div>
-   </div>
-     <!-- nav  end  -->
-   
+      <div><a href="/">Home</a></div>
+      <div><a href="/recipe">Recipe</a></div>
 
+
+      <div><a href="/Community">Community</a></div>
+      <div><a href="/login">Login</a></div>
+      <div><a href="/logout">Logout</a></div>
+    </div>
+  </div>
+  <!-- nav  end  -->
 </template>
 
 <script>
-export default{
-    name : "NavBar"
+export default {
+  name: "NavBar"
 }
 
 
@@ -34,29 +33,30 @@ export default{
 
 
 <style scoped>
-#main{
+#main {
   display: flex;
   justify-content: space-between;
   align-items: center;
- 
+
   background-color: rgb(9, 43, 9);
   color: white;
 }
 
-#img{
-width: 40%;
-display: flex;
-align-items: center;
-margin-left: 60px;
-margin-top: 10px;
+#img {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  margin-left: 60px;
+  margin-top: 10px;
 
 }
-#img>p{
+
+#img>p {
   font-size: 30px;
   font-weight: bold;
 }
 
-#menu{
+#menu {
   width: 40%;
   display: flex;
   align-items: center;
@@ -67,11 +67,9 @@ margin-top: 10px;
   padding: 10px;
 }
 
-#menu>div>a{
+#menu>div>a {
   text-decoration: none;
   color: white;
   font-weight: 600;
 }
-
-
 </style>

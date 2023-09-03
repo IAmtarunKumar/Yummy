@@ -22,7 +22,7 @@
             <router-link to="/login">I am already member</router-link>
         </form>
 
-       p
+        p
     </div>
 </template>
      
@@ -43,7 +43,7 @@ export default {
 
         };
     },
-   
+
     methods: {
         registerUser() {
             // Create an object with the user data
@@ -71,7 +71,7 @@ export default {
                 });
         }
 
-      
+
     }
 }
 
