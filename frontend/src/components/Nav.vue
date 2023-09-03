@@ -15,12 +15,10 @@
     
     <div><a href="/Community">Community</a></div>
     <div><a href="/login">Login</a></div>
-    <div><a href="/logout">Logout</a></div>
- 
+    <div><a href="/logout">Logout</a></div> 
   </div>
-
    </div>
-     <!-- nav bar end  -->
+     <!-- nav  end  -->
    
 
 </template>
