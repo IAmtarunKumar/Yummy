@@ -122,7 +122,7 @@ form * {
 
 form h3 {
   font-size: 32px;
-  font-weight: 500;
+  font-weight: 501;
   line-height: 42px;
   text-align: center;
 }
