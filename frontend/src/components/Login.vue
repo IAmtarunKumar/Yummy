@@ -1,5 +1,5 @@
 <template>
-  
+
   <div id="loginDiv">
     <form @submit.prevent="registerUser">
       <h3>Login Here</h3>
@@ -8,6 +8,8 @@
       <input
         type="text"
         placeholder="Email or Phone"
+
+        
         id="username"
         v-model="username"
       />
