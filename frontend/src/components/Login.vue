@@ -8,7 +8,6 @@
       <input
         type="text"
         placeholder="Email or Phone"
-
         
         id="username"
         v-model="username"
@@ -40,6 +39,7 @@ import Swal from "sweetalert2";
 export default {
   name: "LoginPage",
 
+  
   data() {
     return {
       username: "",
