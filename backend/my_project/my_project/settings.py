@@ -1,5 +1,6 @@
 
-from pathlib import Path
+from pathlib import Path 
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -162,3 +163,7 @@ CORS_ALLOWED_ORIGINS = [
 
 STATIC_URL = '/static/'
 
+OPENAI_API_KEY="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"
+
+
+DEBUG = True

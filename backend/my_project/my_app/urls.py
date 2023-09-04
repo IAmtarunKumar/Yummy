@@ -10,6 +10,17 @@ urlpatterns = [
     path('data/', views.data, name='data'),
     path('community/show/', views.list_communities, name='showCommunity'),
     path('com/', views.create_community, name='postCommunity'),
+    path('recipe/', views.showRecipe, name='recipe_get'),
+    path('recipe_create/', views.addRecipe, name='recipe_get'),
+
+    path('gpt/', views.chat_gpt, name='chat_gpt'),
+    path('custom_recipe/', views.custom_recipe, name='cumtom_recipe'),
+
+
+
+    # path('recipe/', views.RecipeListCreateView.as_view),
+
+
 
 
 

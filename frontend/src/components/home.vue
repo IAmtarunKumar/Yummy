@@ -17,14 +17,52 @@
     <Center style="color: rgb(9, 41, 9);">Discover Your Favorite Dish</Center>
   </h1>
   <br>
-  <div class="search-container">
-    <input class="search-input" type="text" placeholder="Search 2M+ Recipes">
-    <button class="search-button">Search</button>
-  </div>
+
+  <form @submit.prevent="AiFunction">
+
+    <div class="search-container">
+      <input class="search-input" type="text" placeholder="Search 2M+ Recipes" id="keyword" v-model="keyword">
+      <button class="search-button">Search</button>
+    </div>
+
+  </form>
 
   <br><br>
 
+ 
+  <div>
+    <div v-if="mydata && mydata.length > 0">
+      <div v-for="item in mydata" :key="item.id" class="recipe-item">
+        <div class="recipe-image">
+          <img :src="'https://source.unsplash.com/600x400/?' + item.title" alt="">
+        </div>
+        <div class="recipe-details">
+          <h3>{{ item.title }}</h3>
 
+
+          <div style="display: flex; justify-content:space-evenly; flex-wrap:wrap" class="ing_div">
+          <div class="recipe-ingredients">
+            <h4>Ingredients:</h4>
+            <ul>
+              <li v-for="ingredient in item.ingredients" :key="ingredient">{{ ingredient }}</li>
+            </ul>
+          </div>
+
+
+          <div class="recipe-instructions">
+            <h4>Instructions:</h4>
+            <ul>
+              <li v-for="instruction in item.instructions" :key="instruction">{{ instruction }}</li>
+            </ul>
+          </div>
+        </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+  
 
   <br><br><br>
   <hr>
@@ -65,20 +103,65 @@
         toppings. Get ready to savor the taste of Mexico right in your neighborhood.</span>
     </div>
 
-
-
-
-
   </div>
+
+
+
+  <!-- <p> {{ typeof(mydata) }} </p> -->
+  <!-- <p> {{ mydata }} </p> -->
+
+
+ 
+
 
   <br><br><br>
   <hr>
 </template>
 
 <script>
+import axios from "axios";
+// import Swal from "sweetalert2";
 export default {
-  name: "HomePage"
+  name: "HomePage",
+
+  data() {
+    return {
+      keyword: "",
+      mydata: ""
+
+    };
+  },
+  methods: {
+    AiFunction() {
+      const recipeData = {
+        keyword: this.keyword,
+      };
+
+      console.log(recipeData)
+      axios.post('http://localhost:8000/gpt/', recipeData)
+        .then((response) => {
+          if (response.status === 201) {
+            // let data = response.data
+            console.log('successfull:', response.data);
+          
+            this.mydata = response.data.gpt3_output
+            // console.log(this.mydata)
+          } else {
+            alert("error")
+          }
+        })
+        .catch((error) => {
+          console.error('Error creating gpt:', error);
+          alert("error")
+        });
+    }
+  }
 }
+
+
+
+
+
 
 </script>
 
@@ -135,7 +218,7 @@ img {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-
+  flex-wrap: wrap;
 
 }
 
@@ -159,12 +242,13 @@ img {
   justify-content: center;
   align-items: center;
 
+  flex-wrap: wrap;
 
 }
 
 /* Style for the search input */
 .search-input {
-  width: 800px;
+  width: 400px;
   padding: 10px;
   border: none;
   border-radius: 20px;
@@ -189,4 +273,161 @@ img {
 /* Hover effect for the search button */
 .search-button:hover {
   background-color: #0056b3;
-}</style>
+}
+
+
+
+/*gpt recipe css  */
+/* Recipe item container */
+.recipe-item {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  gap: 10px;
+  
+  border: 1px solid #ddd;
+ 
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  border: 2px solid red;
+}
+
+.recipe-item>div{
+  border: 2px solid gray;
+}
+
+/* Recipe image container */
+.recipe-image {
+  
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  overflow: hidden;
+}
+
+
+/* Recipe details container */
+.recipe-details {
+  padding: 20px;
+}
+
+/* Recipe title */
+.recipe-details h3 {
+  font-size: 24px;
+  margin: 0;
+  text-align: center;
+  background-color: rgba(36, 186, 104, 0.315);
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Ingredients and Instructions */
+.recipe-ingredients{
+  margin-top: 20px;
+  text-align: left;
+  width: 40%;
+
+}
+.recipe-instructions {
+
+  margin-top: 20px;
+  text-align: left;
+  width: 60%;
+}
+
+/* Ingredients and Instructions titles */
+.recipe-ingredients h4,
+.recipe-instructions h4 {
+  font-size: 18px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Ingredients and Instructions lists */
+.recipe-ingredients ul,
+.recipe-instructions ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Ingredients and Instructions list items */
+.recipe-ingredients li,
+.recipe-instructions li {
+  margin-left: 0;
+  font-size: 16px;
+  padding-left: 20px;
+  position: relative;
+}
+
+/*  MEDIA QUERY */
+
+
+/* Styles for screens up to 768px wide (Mobile) */
+@media screen and (max-width: 768px) {
+
+  .recipe-item {
+    display: grid;
+    grid-template-columns: 100%;
+     }
+   
+     .recipe-image {
+      display: grid;
+      place-items: center;
+       width: 100%;
+       border-top-right-radius: 0;
+       border-bottom-left-radius: 5px;
+     }
+   
+     .recipe-details {
+       width: 100%;
+     }
+   
+     .ing_div{
+      flex-direction: column;
+     }
+   
+
+  /* Add specific mobile styles here */
+}
+
+/* Styles for screens between 769px and 1024px wide (Tablet) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+  .recipe-item {
+    display: grid;
+    grid-template-columns: 100%;
+     }
+   
+     .recipe-image {
+       width: 100%;
+       display: grid;
+      place-items: center;
+       border-top-right-radius: 0;
+       border-bottom-left-radius: 5px;
+     }
+   
+     .recipe-details {
+       width: 100%;
+     }
+   
+ 
+  
+}
+
+/* Styles for screens between 1025px and 1440px wide (Laptop) */
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+
+  /* Add specific laptop styles here */
+}
+
+/* Styles for screens wider than 1440px (Extra Large) */
+@media screen and (min-width: 1441px) {
+
+  /* Add specific extra-large screen styles here */
+}
+
+
+
+
+
+</style>

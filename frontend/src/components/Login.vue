@@ -26,7 +26,7 @@
       </div>
       <br />
       <!-- <a style="text-decoration: none; color:rgb(18, 110, 147)" href="">I am already member</a> -->
-      <router-link to="/sign">I am new user</router-link>
+      <router-link style="text-decoration: none; border:1px solid rgb(50, 130, 67); padding:8px; background-color:rgb(7, 54, 24); color:white; border-radius:5px" to="/sign">I am new user</router-link>
     </form>
   </div>
 </template>
@@ -58,6 +58,7 @@ export default {
           let token_user = {
             token: response.data.token,
             username: response.data.username,
+            user_id : response.data.user_id
           };
           if (response.data.message == "Login successful") {
             localStorage.setItem("data", JSON.stringify(token_user));
@@ -71,14 +72,24 @@ export default {
             this.$router.push("/");
           } else {
             alert("Something Went Wrong");
-            alert("Please Sign in first");
+            Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'Something went wrong!',
+                        footer: '<a href="/login">Please Enter valid Credentials</a>'
+                    })
           }
 
           // You can handle the response as needed
         })
         .catch((error) => {
           console.error("Error Login user:", error);
-          alert("Please Sign in first");
+          Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'Something went wrong!',
+                        footer: '<a href="/login">Please Enter valid Credentials</a>'
+                    })
         });
     },
   },
@@ -188,4 +199,5 @@ button {
 .social i {
   margin-right: 4px;
 }
+
 </style>

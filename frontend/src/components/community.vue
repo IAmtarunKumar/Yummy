@@ -1,5 +1,6 @@
 <template>
-  <h1 style="background-color: rgba(128, 128, 128, 0.463); padding: 10px">
+  <hr>
+  <h1 style="background-color: rgba(57, 218, 25, 0.344); padding: 10px">
     <Center>Community Form</Center>
   </h1>
   <hr />

@@ -10,6 +10,7 @@ import Home from './components/home.vue'
 import Recipe from './components/Recipe.vue'
 import Community from './components/community.vue'
 import Logout from './components/Logout.vue'
+import Create_Recipe from './components/Create_recipe.vue'
 
 const routes = [
     {
@@ -42,6 +43,11 @@ const routes = [
         name : "Logout",
         path : "/logout",
         component : Logout
+    },
+    {
+        name : "Create_Recipe",
+        path : "/create_recipe",
+        component : Create_Recipe
     }
    
 ]

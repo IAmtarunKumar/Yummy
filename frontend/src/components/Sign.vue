@@ -19,7 +19,10 @@
             </div>
             <br>
             <!-- <a style="text-decoration: none; color:rgb(18, 110, 147)" href="">I am already member</a> -->
-            <router-link to="/login">I am already member</router-link>
+            
+            <router-link style="text-decoration: none; border:1px solid rgb(50, 130, 67); padding:8px; background-color:rgb(7, 54, 24); color:white; border-radius:5px" to="/login">I am already member</router-link>
+            
+            
         </form>
 
         p
@@ -55,19 +58,35 @@ export default {
 
             axios.post('http://localhost:8000/register/', userData)
                 .then((response) => {
-                    console.log('User registered successfully:', response.data);
-                    Swal.fire({
-                        position: 'center',
-                        icon: 'success',
-                        title: 'Sign In Successfully ',
-                        showConfirmButton: false,
-                        timer: 1500
+
+                    if (response.data.message== 'User registered successfully') {
+                        console.log('User registered successfully:', response.data);
+                        Swal.fire({
+                            position: 'center',
+                            icon: 'success',
+                            title: 'Sign In Successfully ',
+                            showConfirmButton: false,
+                            timer: 1500
+                        })
+                        this.$router.push('/login');
+                    }else{
+                        Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'Something went wrong!',
+                        footer: '<a href="/sign">Please Enter valid Credentials</a>'
                     })
-                    this.$router.push('/login');
+                    }
                     // You can handle the response as needed
                 })
                 .catch((error) => {
                     console.error('Error registering user:', error);
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'Something went wrong!',
+                        footer: '<a href="/sign">Please Enter valid Credentials</a>'
+                    })
                 });
         }
 
@@ -99,7 +118,7 @@ export default {
 
 form {
 
-    height: 590px;
+    height: 600px;
     width: 400px;
     background-color: rgba(21, 157, 62, 0.664);
     position: absolute;
