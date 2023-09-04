@@ -1,4 +1,5 @@
 <template>
+  
   <div id="loginDiv">
     <form @submit.prevent="registerUser">
       <h3>Login Here</h3>
