@@ -25,7 +25,7 @@
             
         </form>
 
-        p
+        
     </div>
 </template>
      
@@ -106,7 +106,7 @@ export default {
 #loginDiv {
     width: 100%;
     height: 91vh;
-    background: url(https://img.freepik.com/free-photo/colorful-veggies-frame-with-copy-space_23-2148290738.jpg?w=1060&t=st=1693564595~exp=1693565195~hmac=d00314a1618f55bdcd6968fbfc131b5d05f46e7157ef94739f28964e9168b51a);
+    background: url("../img/login_background.png");
 
     background-size: cover;
     background-repeat: no-repeat;
