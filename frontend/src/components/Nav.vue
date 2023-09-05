@@ -3,7 +3,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #063006;">
     <div class="container">
       <!-- Brand/logo -->
-      <a style="display: flex; justify-content:space-evenly; align-item:center; width:15%" class="navbar-brand" href="#">
+      <a style="display: flex; justify-content:space-evenly; align-item:center; width:10% ; margin-left:30px" class="navbar-brand" href="#">
         <img
           src="https://uploads-ssl.webflow.com/5966ea9a9217ca534caf139f/596d33f36607b12cfdaf8ad2_LogoWhite.png"
           alt="Logo"

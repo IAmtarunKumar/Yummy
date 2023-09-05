@@ -109,16 +109,18 @@ export default {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 form {
   height: 550px;
   width: 400px;
   background-color: rgba(21, 157, 62, 0.664);
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
+ 
+ 
+  
   border-radius: 10px;
   backdrop-filter: blur(10px);
   border: 2px solid rgba(58, 237, 114, 0.1);
@@ -202,5 +204,60 @@ button {
 .social i {
   margin-right: 4px;
 }
+
+
+@media screen and (min-width: 200px) and (max-width: 400px) {
+  form{
+     height: 550px;
+  width: 300px;
+  background-color: rgba(21, 157, 62, 0.664);
+ 
+ 
+  
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(58, 237, 114, 0.1);
+  box-shadow: 0 0 40px rgba(6, 54, 32, 0.6);
+  padding: 50px 35px;
+  }
+  input {
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(227, 234, 229, 0.712);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 2px;
+    font-size: 14px;
+    font-weight: 300;
+  } 
+     
+    
+   
+    
+}
+  /* Styles for screens between 769px and 1024px wide (Tablet) */
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+  
+   
+     
+    
+   
+    
+  }
+  
+  /* Styles for screens between 1025px and 1440px wide (Laptop) */
+  @media screen and (min-width: 1025px) and (max-width: 1440px) {
+  
+    /* Add specific laptop styles here */
+  }
+  
+  /* Styles for screens wider than 1440px (Extra Large) */
+  @media screen and (min-width: 1441px) {
+  
+    /* Add specific extra-large screen styles here */
+  }
+  
+  
 
 </style>

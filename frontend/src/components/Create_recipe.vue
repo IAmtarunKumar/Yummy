@@ -1,5 +1,7 @@
 <template>
+ 
     <div class="recipe-form">
+      <br><br>
       <form @submit.prevent="createRecipe">
         <h2>Create a New Recipe</h2>
         <div class="form-group">
@@ -16,7 +18,9 @@
         </div>
         <button>Create Recipe</button>
       </form>
+      <br><br>
     </div>
+    
   </template>
   
   <script>
@@ -91,18 +95,19 @@
   
   <style scoped>
   .recipe-form {
+   
     display: flex;
     justify-content: center;
     align-items: center;
     
-    height: 90vh;
+    
   background: url(https://i.pinimg.com/736x/31/2a/a9/312aa900f902fe472a775157adc89157.jpg);
 
 
   }
   
   form {
-    width: 40%;
+   padding: 50px;
     background-color: #3663328b;
     padding: 30px;
     border-radius: 10px;
