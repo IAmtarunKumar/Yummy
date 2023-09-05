@@ -27,8 +27,8 @@
           </div>
   
           <div class="form-group">
-            <label for="ingredient_not">Any ingredients you don't want to see in your recommended recipes? (User "," for multiple ingredient)</label>
-            <input type="text" name="ingredient_not" id="ingredient_not" v-model="ingredient_not">
+            <label for="ingredients_not">Any ingredients you don't want to see in your recommended recipes? (User "," for multiple ingredient)</label>
+            <input type="text" name="ingredient_not" id="ingredients_not" v-model="ingredients_not">
           </div>
         </div>
 
@@ -80,7 +80,7 @@
     <div v-if="mydata && mydata.length > 0">
       <div v-for="item in mydata" :key="item.id" class="recipe-item">
         <div class="recipe-image">
-          <img :src="'https://source.unsplash.com/600x400/?' + item.title" alt="">
+          <img :src="'https://source.unsplash.com/600x400/?recipe' + item.title" alt="">
         </div>
         <div class="recipe-details">
           <h3>{{ item.title }}</h3>
@@ -322,11 +322,12 @@
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-    border: 2px solid red;
+
+
   }
   
   .recipe-item>div{
-    border: 2px solid gray;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
   }
   
   /* Recipe image container */
@@ -337,6 +338,7 @@
     overflow: hidden;
   }
   
+
   
   /* Recipe details container */
   .recipe-details {

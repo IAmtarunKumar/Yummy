@@ -290,11 +290,11 @@ img {
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-  border: 2px solid red;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .recipe-item>div{
-  border: 2px solid gray;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 /* Recipe image container */

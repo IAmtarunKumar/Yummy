@@ -2,6 +2,8 @@
 from pathlib import Path 
 import os
 
+from dotenv import load_dotenv
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -163,7 +165,11 @@ CORS_ALLOWED_ORIGINS = [
 
 STATIC_URL = '/static/'
 
-OPENAI_API_KEY="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"
+# OPENAI_API_KEY="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"
 
+# Load environment variables from .env file
+load_dotenv()
+
+OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 
 DEBUG = True

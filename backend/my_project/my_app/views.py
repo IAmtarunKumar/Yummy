@@ -177,7 +177,7 @@ def chat_gpt(request):
             response = openai.ChatCompletion.create(
                 model="gpt-3.5-turbo",
                 messages=[{ "role": "user",
-                            "content": f'Create 4 recipes in JSON format using the keyword "{keyword}". Each recipe should have the following structure: "title": "Recipe Title", "ingredients": "array of ingredients separated by commas", "instructions": "Array of Cooking steps instructions"  output in json format only.' + "Example : [{} , {} , {}]" }
+                            "content": f'Create 4 recipes in JSON format using the keyword "{keyword}". Each recipe should have the following structure: "title": "Recipe Title", "ingredients": "Array of ingredients ", "instructions": "Array of Cooking steps instructions"  output in json format only.' + "Example : [{} , {} , {}]" }
   ])
             if response.choices:
                 data=response.choices[0].message.content
@@ -213,7 +213,7 @@ def custom_recipe(request):
             response = openai.ChatCompletion.create(
                 model="gpt-3.5-turbo",
                 messages=[{ "role": "user",
-                         "content": f"Create 5 recipes in JSON format based on your preferences. You mentioned the following: - Cuisines: {cuisines} - Ingredients to avoid: {ingredients_not} - Cooking skills: {skills} - Allergies: {allergies} - Specific diets: {follow_diets} For each recipe, provide the following structure:  - 'title': 'Recipe Title'  - 'ingredients': 'Array of ingredients separated by commas' - 'instructions': 'Array of cooking instructions steps' Output the recipes in JSON format as a list of dictionaries." + " Example: [{}, {}, {}, {}, {}]"
+                         "content": f"Create 5 recipes in JSON format based on your preferences. You mentioned the following: - Cuisines: {cuisines} - Ingredients to avoid: {ingredients_not} - Cooking skills: {skills} - Allergies: {allergies} - Specific diets: {follow_diets} For each recipe, provide the following structure:  - 'title': 'Recipe Title'  - 'ingredients': 'Array of ingredients ' - 'instructions': 'Array of cooking instructions steps' Output the recipes in JSON format as a list of dictionaries." + " Example: [{}, {}, {}, {}, {}]"
  } ])
             if response.choices:
                 data=response.choices[0].message.content
