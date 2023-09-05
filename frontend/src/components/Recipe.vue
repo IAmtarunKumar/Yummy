@@ -315,6 +315,8 @@
     display: grid;
     grid-template-columns: 40% 60%;
     gap: 10px;
+
+    align-items: center;
     
     border: 1px solid #ddd;
    

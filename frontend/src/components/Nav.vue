@@ -1,31 +1,55 @@
 <template>
-  <!-- nav start -->
-  <div id="main" :class="{ 'active': isMenuActive }">
-    <div id="img">
-      <img
-        src="https://uploads-ssl.webflow.com/5966ea9a9217ca534caf139f/596d33f36607b12cfdaf8ad2_LogoWhite.png"
-        alt="" width="40" class="failory-logo-image">
-      <span>
-        <h4>Yummy</h4>
-      </span>
-    </div>
+  <!-- Bootstrap Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #063006;">
+    <div class="container">
+      <!-- Brand/logo -->
+      <a style="display: flex; justify-content:space-evenly; align-item:center; width:15%" class="navbar-brand" href="#">
+        <img
+          src="https://uploads-ssl.webflow.com/5966ea9a9217ca534caf139f/596d33f36607b12cfdaf8ad2_LogoWhite.png"
+          alt="Logo"
+          width="40"
+          class="failory-logo-image"
+        />
+        <span style="margin-top:16px ;"><h4 class="text-white">Yummy</h4></span>
+      </a>
 
-    <!-- Toggle button -->
-    <div id="toggle-button" @click="toggleMenu">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
-    </div>
+      <!-- Toggle button -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        @click="toggleMenu"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <div id="menu">
-      <div><a href="/">Home</a></div>
-      <div><a href="/recipe">Recipe</a></div>
-      <div><a href="/Community">Community</a></div>
-      <div><a href="/login">Login</a></div>
-      <div><a href="/logout">Logout</a></div>
+      <!-- Menu for larger screens -->
+      <div class="collapse navbar-collapse" :class="{ show: isMenuActive }" id="navbarNav">
+        <ul style="width: 60%; display:flex; justify-content:space-evenly; margin-left:50%; font-size:20px; color:white; font-weight:600"  class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/recipe">Recipe</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Community">Community</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/login">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/logout">Logout</a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-  <!-- nav end -->
+  </nav>
+  <!-- Bootstrap Navbar End -->
 </template>
 
 <script>
@@ -40,88 +64,13 @@ export default {
     toggleMenu() {
       this.isMenuActive = !this.isMenuActive;
     },
-    closeMenu() {
-      this.isMenuActive = false;
-    },
   },
 };
 </script>
 
 <style scoped>
-#main {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: rgb(9, 43, 9);
+/* Your custom CSS styles here */
+.nav-link{
   color: white;
-  padding: 10px 20px;
-}
-
-#img {
-  display: flex;
-  align-items: center;
-}
-
-#img>p {
-  font-size: 30px;
-  font-weight: bold;
-  margin-left: 10px;
-}
-
-#menu {
-  display: flex;
-  align-items: center;
-  font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-  list-style: none;
-  padding: 0;
-}
-
-#menu>div {
-  margin: 0 10px;
-}
-
-#menu>div>a {
-  text-decoration: none;
-  color: white;
-  font-weight: 600;
-}
-
-#toggle-button {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-}
-
-.bar {
-  width: 25px;
-  height: 3px;
-  background-color: white;
-  margin: 3px 0;
-  border-radius: 3px;
-}
-
-/* Media Query for small screens */
-@media (max-width: 768px) {
-  #menu {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgb(9, 43, 9);
-    position: absolute;
-    top: 60px;
-    right: 0;
-    left: 0;
-    text-align: center;
-  }
-
-  #menu.active {
-    display: flex;
-  }
-
-  #toggle-button {
-    display: flex;
-    z-index: 1;
-  }
 }
 </style>
