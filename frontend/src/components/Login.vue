@@ -22,11 +22,9 @@
       />
 
       <button>Log In</button>
-      <div class="social">
-        <div class="go"><i class="fab fa-google"></i> Google</div>
-        <div class="fb"><i class="fab fa-facebook"></i> Facebook</div>
-      </div>
-      <br />
+     <br>
+     <br>
+      <br>
       <!-- <a style="text-decoration: none; color:rgb(18, 110, 147)" href="">I am already member</a> -->
       <router-link style="text-decoration: none; border:1px solid rgb(50, 130, 67); padding:8px; background-color:rgb(7, 54, 24); color:white; border-radius:5px" to="/sign">I am new user</router-link>
     </form>

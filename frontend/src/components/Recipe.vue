@@ -17,8 +17,10 @@
         <div class="form-box">
           <div class="form-group">
             <label for="cuisines">What are your favorite cuisines?</label>
-            <select name="cuisines" id="cuisines" v-model="cuisines">
+            <select name="cuisines" id="cuisines" v-model="cuisines" required>
               <option value="AMERICAN">AMERICAN</option>
+              <option value="">Select</option>
+
               <option value="KID-FRIENDLY">KID-FRIENDLY</option>
               <option value="ITALIAN">ITALIAN</option>
               <option value="ASIAN">ASIAN</option>
@@ -26,9 +28,19 @@
             </select>
           </div>
   
+       
+
+
           <div class="form-group">
-            <label for="ingredients_not">Any ingredients you don't want to see in your recommended recipes? (User "," for multiple ingredient)</label>
-            <input type="text" name="ingredient_not" id="ingredients_not" v-model="ingredients_not">
+            <label for="follow_diets">Do you follow any of these diets?</label>
+            <select name="follow_diets" id="follow_diets"  v-model="follow_diets" required>
+              <option value="">Select</option>
+
+              <option value="VEGETARIAN">VEGETARIAN</option>
+              <option value="LOW-FODMAP">LOW-FODMAP</option>
+              <option value="VEGAN">VEGAN</option>
+              <!-- Add more diet options here -->
+            </select>
           </div>
         </div>
 
@@ -37,7 +49,9 @@
         <div class="form-box">
           <div class="form-group">
             <label for="skills">How would you describe your cooking skills?</label>
-            <select name="skills" id="skills" v-model="skills" >
+            <select name="skills" id="skills" v-model="skills" required >
+              <option value="">Select</option>
+
               <option value="BEGINNER">BEGINNER</option>
               <option value="INTERMEDIATE">INTERMEDIATE</option>
               <option value="ADVANCED">ADVANCED</option>
@@ -46,7 +60,9 @@
   
           <div class="form-group">
             <label for="allergies">Do you have any food allergies?</label>
-            <select name="allergies" id="allergies" v-model="allergies">
+            <select name="allergies" id="allergies" v-model="allergies" required>
+              <option value="">Select</option>
+
               <option value="WHEAT-FREE">WHEAT-FREE</option>
               <option value="DAIRY-FREE">DAIRY-FREE</option>
               <option value="PEANUT-FREE">PEANUT-FREE</option>
@@ -56,14 +72,10 @@
         </div>
   
         <div class="form-box">
+        
           <div class="form-group">
-            <label for="follow_diets">Do you follow any of these diets?</label>
-            <select name="follow_diets" id="follow_diets"  v-model="follow_diets">
-              <option value="VEGETARIAN">VEGETARIAN</option>
-              <option value="LOW-FODMAP">LOW-FODMAP</option>
-              <option value="VEGAN">VEGAN</option>
-              <!-- Add more diet options here -->
-            </select>
+            <label for="ingredients_not">Any ingredients you don't want to see in your recommended recipes? (User "," for multiple ingredient)</label>
+            <input type="text" name="ingredient_not" id="ingredients_not" v-model="ingredients_not" required>
           </div>
   
           <div class="form-group">

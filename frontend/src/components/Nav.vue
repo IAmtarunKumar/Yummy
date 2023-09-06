@@ -3,14 +3,16 @@
   <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #063006;">
     <div class="container">
       <!-- Brand/logo -->
-      <a style="display: flex; justify-content:space-evenly; align-item:center; width:10% ; margin-left:30px" class="navbar-brand" href="#">
+      <a style="display: flex; justify-content:space-evenly; align-item:center; width:10% ; margin-left:30px" class="navbar-brand" href="/">
+
+     
         <img
           src="https://uploads-ssl.webflow.com/5966ea9a9217ca534caf139f/596d33f36607b12cfdaf8ad2_LogoWhite.png"
           alt="Logo"
           width="40"
           class="failory-logo-image"
         />
-        <span style="margin-top:16px ;"><h4 class="text-white">Yummy</h4></span>
+        <span style="margin-top:16px ;"><h4 class="text-white"> Yummy</h4></span>
       </a>
 
       <!-- Toggle button -->
@@ -36,12 +38,15 @@
           <li class="nav-item">
             <a class="nav-link" href="/recipe">Recipe</a>
           </li>
+
           <li class="nav-item">
             <a class="nav-link" href="/Community">Community</a>
           </li>
+
           <li class="nav-item">
-            <a class="nav-link" href="/login">Login</a>
+            <a class="nav-link" href="/login">   Login</a>
           </li>
+
           <li class="nav-item">
             <a class="nav-link" href="/logout">Logout</a>
           </li>
@@ -49,10 +54,14 @@
       </div>
     </div>
   </nav>
+
+  
+
   <!-- Bootstrap Navbar End -->
 </template>
 
 <script>
+
 export default {
   name: "NavBar",
   data() {

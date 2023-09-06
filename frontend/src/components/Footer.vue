@@ -2,12 +2,13 @@
   <div id="footerDiv">
     <div class="container-footer">
       <div class="footer-column">
+        <a href="">
         <img
           src="https://uploads-ssl.webflow.com/5966ea9a9217ca534caf139f/596d33f36607b12cfdaf8ad2_LogoWhite.png"
           alt=""
           width="40"
           class="failory-logo-image"
-        />
+        /></a>
         <h3 class="footer-failory-name">Yummy</h3>
         <p class="footer-description-failory">For Better Diets! Yummy</p>
       </div>

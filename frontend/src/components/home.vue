@@ -31,6 +31,20 @@
 
  
   <div>
+
+   <div v-if="search===true && mydata=='' " >
+    <div style="display: flex; justify-content: center; ">
+      <img src="https://media.tenor.com/On7kvXhzml4AAAAi/loading-gif.gif" alt="">
+     <!-- <img src="../img/gifimag.gif" alt=""> -->
+   
+
+  </div>
+  <br>
+  <h3>
+      <Center> {{ msg="Recipes is processing...." }} </Center>
+  </h3>
+   </div>
+
     <div v-if="mydata && mydata.length > 0">
       <div v-for="item in mydata" :key="item.id" class="recipe-item">
         <div class="recipe-image">
@@ -61,6 +75,10 @@
         </div>
       </div>
     </div>
+
+
+
+
   </div>
   
 
@@ -127,12 +145,14 @@ export default {
   data() {
     return {
       keyword: "",
-      mydata: ""
+      mydata: "",
+      search: false
 
     };
   },
   methods: {
     AiFunction() {
+      this.search=true
       const recipeData = {
         keyword: this.keyword,
       };
@@ -248,13 +268,14 @@ img {
 
 /* Style for the search input */
 .search-input {
-  width: 400px;
-  padding: 10px;
+  width: 800px;
+  padding: 20px;
   border: none;
   border-radius: 20px;
-  font-size: 25px;
+  font-size: 20px;
   box-shadow: 0px 2px 4px rgba(5, 4, 4, 0.995);
   outline: none;
+  margin: 20px;
 }
 
 /* Style for the search button */
@@ -263,11 +284,12 @@ img {
   color: white;
   border: none;
   border-radius: 20px;
-  padding: 10px 60px;
+  padding: 20px 70px;
   margin-left: 10px;
   cursor: pointer;
-  font-size: 22px;
+  font-size: 25px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 10px;
 }
 
 /* Hover effect for the search button */
