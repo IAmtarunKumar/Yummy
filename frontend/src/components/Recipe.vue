@@ -5,7 +5,7 @@
   
       <div id="recipe-box" class="container">
         <div class="cr cr-created">
-          <a href="#"><i class="fas fa-list-ul"></i> Created Recipes</a>
+          <a href="/my_recipe"><i class="fas fa-list-ul"></i> Created Recipes</a>
         </div>
         <div class="cr cr-create">
           <a href="/create_recipe"><i class="fas fa-plus-circle"></i> Create Recipes</a>

@@ -36,7 +36,7 @@
             <a class="nav-link" href="/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/recipe">Recipe</a>
+            <a class="nav-link" href="/recipe">Custom Recipe</a>
           </li>
 
           <li class="nav-item">
@@ -55,7 +55,10 @@
     </div>
   </nav>
 
-  
+  <br>
+  <br>
+
+  <br>
 
   <!-- Bootstrap Navbar End -->
 </template>
@@ -79,6 +82,15 @@ export default {
 
 <style scoped>
 /* Your custom CSS styles here */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+
+}
+
 .nav-link{
   color: white;
 }

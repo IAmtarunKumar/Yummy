@@ -11,6 +11,8 @@ import Recipe from './components/Recipe.vue'
 import Community from './components/community.vue'
 import Logout from './components/Logout.vue'
 import Create_Recipe from './components/Create_recipe.vue'
+import My_recipes from './components/My_recipe.vue'
+
 
 const routes = [
     {
@@ -48,6 +50,11 @@ const routes = [
         name : "Create_Recipe",
         path : "/create_recipe",
         component : Create_Recipe
+    },
+    {
+        name : "My_Recipe",
+        path : "/my_recipe",
+        component : My_recipes
     }
    
 ]
