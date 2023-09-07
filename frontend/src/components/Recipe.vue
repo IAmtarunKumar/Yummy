@@ -86,6 +86,24 @@
     </div>
 
     <br><br>
+
+
+    <div v-if="search===true && mydata=='' " >
+      <div style="display: flex; justify-content: center; ">
+        <img src="https://media.tenor.com/On7kvXhzml4AAAAi/loading-gif.gif" alt="">
+       <!-- <img src="../img/gifimag.gif" alt=""> -->
+     
+  
+    </div>
+    <br>
+    <h3>
+        <Center> {{ msg="Recipes is processing...." }} </Center>
+    </h3>
+     </div>
+
+
+
+
    
  
   <div>
@@ -138,11 +156,15 @@
         skills : "",
         allergies : "",
         follow_diets : "",
-        mydata: ""
+        mydata: "",
+        search : false
       };
     },
     methods: {
+
       AiFunction() {
+
+        this.search=true
         const recipeData = {
           
         cuisines : this.cuisines,

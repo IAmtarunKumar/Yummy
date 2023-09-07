@@ -1,5 +1,8 @@
 <template>
 
+
+  
+
   <div id="loginDiv">
     <form @submit.prevent="registerUser">
       <h3>Login Here</h3>
@@ -51,7 +54,7 @@ export default {
         username: this.username,
         password: this.password,
       };
-
+      console.log(userData)
       axios
         .post("http://localhost:8000/login/", userData)
         .then((response) => {
