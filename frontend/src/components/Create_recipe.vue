@@ -49,7 +49,7 @@ export default {
       };
 
       axios
-        .post("https://django-chack.onrender.com/recipe_create/", recipeData)
+        .post("https://django-chack.onrender.com/api/post/my_recipe/", recipeData)
         .then((response) => {
           if (response.status === 201) {
             console.log("Recipe created successfully:", response.data);

@@ -53,7 +53,7 @@ export default {
                 password: this.password,
             };
 
-            axios.post('https://django-chack.onrender.com/register/', userData)
+            axios.post('https://django-chack.onrender.com/api/signin/', userData)
                 .then((response) => {
 
                     if (response.data.message== 'User registered successfully') {

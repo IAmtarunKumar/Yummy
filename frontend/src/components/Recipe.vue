@@ -5,10 +5,10 @@
   
       <div id="recipe-box" class="container">
         <div class="cr cr-created">
-          <a href="/my_recipe"><i class="fas fa-list-ul"></i> Created Recipes</a>
+          <a href="/custom_recipe"><i class="fas fa-list-ul"></i> Created Recipes</a>
         </div>
         <div class="cr cr-create">
-          <a href="/create_recipe"><i class="fas fa-plus-circle"></i> Create Recipes</a>
+          <a href="/custom_recipe"><i class="fas fa-plus-circle"></i> Create Recipes</a>
         </div>
       </div>
       <br>
@@ -176,7 +176,7 @@
         follow_diets : this.follow_diets,
         };
         console.log(recipeData)
-        axios.post('https://django-chack.onrender.com/custom_recipe/', recipeData)
+        axios.post('https://django-chack.onrender.com/api/filtered/dish/', recipeData)
           .then((response) => {
             if (response.status === 201) {
               console.log('successful:', response.data);

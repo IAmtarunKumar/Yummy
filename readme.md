@@ -16,7 +16,7 @@
   
   ## Deployed App
   
-  - <b>Backend</b>: [https://backend.yummy.com](https://backend.yummy.com)
+  - <b>Backend</b>: [https://backend.yummy.com](https://django-chack.onrender.com)
   - <b>Frontend</b>: [https://frontend.yummy.com](https://frontend.yummy.com)
   
   ## Video Walkthrough
@@ -49,7 +49,7 @@
   
   To embark on your Yummy.com journey, follow these simple steps:
   
-  1. Clone the Yummy.com repository from [GitHub](https://github.com/yummy-team/yummy).
+  1. Clone the Yummy.com repository from [GitHub](https://github.com/IAmtarunKumar/Yummy.com).
   2. Navigate to the project directory.
   3. Install the necessary dependencies:
   
@@ -85,25 +85,22 @@
   ## API Endpoints
   
   Here are some of the key API endpoints used in Yummy:
-  
-  POST /api/recipes/create: Create a new recipe.
-  GET /api/recipes/:id: Get details of a specific recipe.
-  GET /api/users/:id: Get user profile information.
-  POST /api/reviews/create: Create a review for a recipe.
-  POST /api/users/register: Register a new user.
-  
-  
-  
-  
-  
-  
-  ## Technology Stack
-  Yummy utilizes a modern technology stack to provide a seamless user experience:
-  
-  <b>Front-end</b>: Vue.js  <br>
-  <b>Back-end</b>: Django  <br>
-  <b>Database</b>: MongoDB  <br>
+-POST /api/signin/: Register a new user.
+-POST /api/login/: Log in as an existing user.
+-POST /api/logout/: Log out from the application.
+-GET /api/get/community/: Get a list of communities.
+-POST /api/post/community/: Create a new community.
+-GET /api/get/my_recipe/: Retrieve your recipes.
+-POST /api/post/my_recipe/: Create a new recipe.
+-POST /api/search/dish/: Search for a dish using chatbot integration.
+-POST /api/filtered/dish/: Get custom recipes based on specific criteria.
 
+## Technology Stack
+
+Yummy utilizes a modern technology stack to provide a seamless user experience:
+
+<b>Front-end</b>: Vue.js <br>
+<b>Back-end</b>: Django <br>
+<b>Database</b>: MongoDB <br>
 
   <img src="" alt="">
-  

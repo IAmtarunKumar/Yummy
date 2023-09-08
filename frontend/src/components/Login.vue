@@ -57,7 +57,7 @@ export default {
       };
       console.log(userData)
       axios
-        .post("https://django-chack.onrender.com/login/", userData)
+        .post("https://django-chack.onrender.com/api/login/", userData)
         .then((response) => {
           console.log("User Login successfully:", response.data);
           let token_user = {

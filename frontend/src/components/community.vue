@@ -63,7 +63,7 @@ export default {
       // };
 
       axios
-        .post("https://django-chack.onrender.com/com/", userData)
+        .post("https://django-chack.onrender.com/api/post/community/", userData)
         .then((response) => {
           console.log("Posted successfully:", response.data);
           Swal.fire({
@@ -90,7 +90,7 @@ export default {
     getCommunityData() {
       // Replace 'API_URL' with the actual URL of your API
       axios
-        .get("https://django-chack.onrender.com/community/show/")
+        .get("https://django-chack.onrender.com/api/get/community/")
         .then((response) => {
           // Handle the API response here
           this.communityData = response.data; // Assign the API data to your variable

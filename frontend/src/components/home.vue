@@ -158,7 +158,7 @@ export default {
       };
 
       console.log(recipeData)
-      axios.post('https://django-chack.onrender.com/gpt/', recipeData)
+      axios.post('https://django-chack.onrender.com/api/search/dish/', recipeData)
         .then((response) => {
           if (response.status === 201) {
             // let data = response.data

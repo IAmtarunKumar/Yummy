@@ -20,7 +20,7 @@ export default {
 
     mounted() {
         // Send a logout request to your server-side endpoint
-        axios.post('https://django-chack.onrender.com/logout/') // Replace with your server's endpoint
+        axios.post('https://django-chack.onrender.com/api/logout/') // Replace with your server's endpoint
             .then((response) => {
                 console.log('User Logout successfully:', response.data);
                 //   alert('Logout Successfully');
