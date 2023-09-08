@@ -1,11 +1,4 @@
-<p align="center">
-     <img
-          src="https://uploads-ssl.webflow.com/5966ea9a9217ca534caf139f/596d33f36607b12cfdaf8ad2_LogoWhite.png"
-          alt=""
-          width="40"
-          class="failory-logo-image"
-        />
-  </p>
+
   
   <h1><center> <img
           src="https://uploads-ssl.webflow.com/5966ea9a9217ca534caf139f/596d33f36607b12cfdaf8ad2_LogoWhite.png"
