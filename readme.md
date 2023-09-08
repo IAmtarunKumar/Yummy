@@ -1,5 +1,10 @@
 <p align="center">
-    <img src="yummy_logo.png" alt="Yummy Logo" width="200" height="200">
+     <img
+          src="https://uploads-ssl.webflow.com/5966ea9a9217ca534caf139f/596d33f36607b12cfdaf8ad2_LogoWhite.png"
+          alt=""
+          width="40"
+          class="failory-logo-image"
+        />
   </p>
   
   <h1><center> Yummy.com </center></h1>
