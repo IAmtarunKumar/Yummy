@@ -158,7 +158,7 @@ export default {
       };
 
       console.log(recipeData)
-      axios.post('http://localhost:8000/gpt/', recipeData)
+      axios.post('https://django-chack.onrender.com/gpt/', recipeData)
         .then((response) => {
           if (response.status === 201) {
             // let data = response.data

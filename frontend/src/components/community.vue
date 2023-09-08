@@ -51,19 +51,19 @@ export default {
 
       let localStorage_data = JSON.parse(localStorage.getItem("data"))
       console.log(localStorage_data)
-      let token = localStorage_data["token"]
+      // let token = localStorage_data["token"]
       //   console.log(token)
 
 
       // Set up the axios headers to include the token
-      const axiosConfig = {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      };
+      // const axiosConfig = {
+      //   headers: {
+      //     Authorization: `Bearer ${token}`,
+      //   },
+      // };
 
       axios
-        .post("http://localhost:8000/com/", userData, axiosConfig)
+        .post("https://django-chack.onrender.com/com/", userData)
         .then((response) => {
           console.log("Posted successfully:", response.data);
           Swal.fire({
@@ -90,7 +90,7 @@ export default {
     getCommunityData() {
       // Replace 'API_URL' with the actual URL of your API
       axios
-        .get("http://localhost:8000/community/show/")
+        .get("https://django-chack.onrender.com/community/show/")
         .then((response) => {
           // Handle the API response here
           this.communityData = response.data; // Assign the API data to your variable

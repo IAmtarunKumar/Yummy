@@ -53,7 +53,7 @@ export default {
                 password: this.password,
             };
 
-            axios.post('http://localhost:8000/register/', userData)
+            axios.post('https://django-chack.onrender.com/register/', userData)
                 .then((response) => {
 
                     if (response.data.message== 'User registered successfully') {
@@ -61,7 +61,7 @@ export default {
                         Swal.fire({
                             position: 'center',
                             icon: 'success',
-                            title: 'Sign In Successfully ',
+                            title: 'Sign In Successfully 🤗',
                             showConfirmButton: false,
                             timer: 1500
                         })
@@ -70,8 +70,8 @@ export default {
                         Swal.fire({
                         icon: 'error',
                         title: 'Oops...',
-                        text: 'Something went wrong!',
-                        footer: '<a href="/sign">Please Enter valid Credentials</a>'
+                        text: 'Something went wrong! ☠️',
+                        
                     })
                     }
                     // You can handle the response as needed
@@ -81,8 +81,8 @@ export default {
                     Swal.fire({
                         icon: 'error',
                         title: 'Oops...',
-                        text: 'Something went wrong!',
-                        footer: '<a href="/sign">Please Enter valid Credentials</a>'
+                        text: 'Something went wrong! ☠️',
+                       
                     })
                 });
         }

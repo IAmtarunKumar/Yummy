@@ -47,16 +47,7 @@
         
   
         <div class="form-box">
-          <div class="form-group">
-            <label for="skills">How would you describe your cooking skills?</label>
-            <select name="skills" id="skills" v-model="skills" required >
-              <option value="">Select</option>
-
-              <option value="BEGINNER">BEGINNER</option>
-              <option value="INTERMEDIATE">INTERMEDIATE</option>
-              <option value="ADVANCED">ADVANCED</option>
-            </select>
-          </div>
+         
   
           <div class="form-group">
             <label for="allergies">Do you have any food allergies?</label>
@@ -67,6 +58,17 @@
               <option value="DAIRY-FREE">DAIRY-FREE</option>
               <option value="PEANUT-FREE">PEANUT-FREE</option>
               <!-- Add more allergy options here -->
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="skills">How would you describe your cooking skills?</label>
+            <select name="skills" id="skills" v-model="skills" required >
+              <option value="">Select</option>
+
+              <option value="BEGINNER">BEGINNER</option>
+              <option value="INTERMEDIATE">INTERMEDIATE</option>
+              <option value="ADVANCED">ADVANCED</option>
             </select>
           </div>
         </div>
@@ -174,7 +176,7 @@
         follow_diets : this.follow_diets,
         };
         console.log(recipeData)
-        axios.post('http://localhost:8000/custom_recipe/', recipeData)
+        axios.post('https://django-chack.onrender.com/custom_recipe/', recipeData)
           .then((response) => {
             if (response.status === 201) {
               console.log('successful:', response.data);

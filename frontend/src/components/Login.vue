@@ -49,6 +49,7 @@ export default {
   },
   methods: {
     registerUser() {
+      
       // Create an object with the user data
       const userData = {
         username: this.username,
@@ -56,7 +57,7 @@ export default {
       };
       console.log(userData)
       axios
-        .post("http://localhost:8000/login/", userData)
+        .post("https://django-chack.onrender.com/login/", userData)
         .then((response) => {
           console.log("User Login successfully:", response.data);
           let token_user = {
@@ -69,7 +70,7 @@ export default {
             Swal.fire({
               position: "center",
               icon: "success",
-              title: "Login Successfully ",
+              title: "Login Successfully 🤗",
               showConfirmButton: false,
               timer: 1500,
             });
@@ -79,8 +80,8 @@ export default {
             Swal.fire({
                         icon: 'error',
                         title: 'Oops...',
-                        text: 'Something went wrong!',
-                        footer: '<a href="/login">Please Enter valid Credentials</a>'
+                        text: 'Something went wrong! ☠️',
+                       
                     })
           }
 
@@ -92,7 +93,7 @@ export default {
                         icon: 'error',
                         title: 'Oops...',
                         text: 'Something went wrong!',
-                        footer: '<a href="/login">Please Enter valid Credentials</a>'
+                       
                     })
         });
     },

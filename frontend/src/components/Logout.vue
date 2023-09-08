@@ -20,7 +20,7 @@ export default {
 
     mounted() {
         // Send a logout request to your server-side endpoint
-        axios.post('http://localhost:8000/logout/') // Replace with your server's endpoint
+        axios.post('https://django-chack.onrender.com/logout/') // Replace with your server's endpoint
             .then((response) => {
                 console.log('User Logout successfully:', response.data);
                 //   alert('Logout Successfully');
@@ -30,7 +30,8 @@ export default {
                     Swal.fire({
                         position: 'center',
                         icon: 'success',
-                        title: 'Logout Successfully ',
+                        title: 'Logout Successfully 🤗 ',
+                       
                         showConfirmButton: false,
                         timer: 1500
                     })
@@ -42,7 +43,12 @@ export default {
             })
             .catch((error) => {
                 console.error('Error Logout user:', error);
-                alert("Something Went Wrong")
+                Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'Something went wrong! ☠️',
+                       
+                    })
             });
     },
 };
