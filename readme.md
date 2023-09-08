@@ -7,7 +7,12 @@
         />
   </p>
   
-  <h1><center> Yummy.com </center></h1>
+  <h1><center> <img
+          src="https://uploads-ssl.webflow.com/5966ea9a9217ca534caf139f/596d33f36607b12cfdaf8ad2_LogoWhite.png"
+          alt=""
+          width="40"
+          class="failory-logo-image"
+        />    Yummy.com </center></h1>
 
   <p><center>  - Your Personalized Recipe Recommendation Platform</center></p>
   
@@ -91,30 +96,30 @@
   
   Here are some of the key API endpoints used in Yummy:
 
-- **POST /api/signin/: Register a new user.
-<br>
-<img src="./readme img/sign in.png" alt="">
-- **POST /api/login/: Log in as an existing user.
-<br>
-<img src="./readme img/login.png" alt="">
+- \*\*POST /api/signin/: Register a new user.
+  <br>
+  <img src="./readme img/sign in.png" alt="">
+- \*\*POST /api/login/: Log in as an existing user.
+  <br>
+  <img src="./readme img/login.png" alt="">
 
-- **POST /api/logout/: Log out from the application.
-<br>
-<img src="./readme img/logout.png" alt="">
+- \*\*POST /api/logout/: Log out from the application.
+  <br>
+  <img src="./readme img/logout.png" alt="">
 
-- **GET /api/get/community/: Get a list of communities.
-- **POST /api/post/community/: Create a new community.
-<br>
-<img src="./readme img/comunity.png" alt="">
+- \*\*GET /api/get/community/: Get a list of communities.
+- \*\*POST /api/post/community/: Create a new community.
+  <br>
+  <img src="./readme img/comunity.png" alt="">
 
-- **GET /api/get/my_recipe/: Retrieve your recipes.
-- **POST /api/post/my_recipe/: Create a new recipe.
+- \*\*GET /api/get/my_recipe/: Retrieve your recipes.
+- \*\*POST /api/post/my_recipe/: Create a new recipe.
 
-- **POST /api/search/dish/: Search for a dish using chatbot integration.
-<br>
-<img src="./readme img/home.png" alt="">
+- \*\*POST /api/search/dish/: Search for a dish using chatbot integration.
+  <br>
+  <img src="./readme img/home.png" alt="">
 
-- **POST /api/filtered/dish/: Get custom recipes based on specific criteria.
+- \*\*POST /api/filtered/dish/: Get custom recipes based on specific criteria.
 
 ## Technology Stack
 
@@ -123,5 +128,3 @@ Yummy utilizes a modern technology stack to provide a seamless user experience:
 <b>Front-end</b>: Vue.js <br>
 <b>Back-end</b>: Django <br>
 <b>Database</b>: MongoDB <br>
-
-  
