@@ -62,12 +62,12 @@
   ```
   
   ## Usage
-  -Sign in or create an account to personalize your recipe recommendations.
-  -Explore recipes based on your preferences or search for specific cuisines, ingredients, or dietary requirements.
-  -Save your favorite recipes to your collection for quick access.
-  -Rate and review recipes you've tried to help others discover great dishes.
-  -Share your culinary creations and tips with the Yummy community.
-  -Contribute ingredient substitutions, modifications, and variations to enhance the recipes.
+  - **Sign in or create an account to personalize your recipe recommendations.
+  - **Explore recipes based on your preferences or search for specific cuisines, ingredients, or dietary requirements.
+  - **Save your favorite recipes to your collection for quick access.
+  - **Rate and review recipes you've tried to help others discover great dishes.
+  - **Share your culinary creations and tips with the Yummy community.
+  - **Contribute ingredient substitutions, modifications, and variations to enhance the recipes.
   
   ```bash
   # Example
@@ -85,15 +85,15 @@
   ## API Endpoints
   
   Here are some of the key API endpoints used in Yummy:
--POST /api/signin/: Register a new user.
--POST /api/login/: Log in as an existing user.
--POST /api/logout/: Log out from the application.
--GET /api/get/community/: Get a list of communities.
--POST /api/post/community/: Create a new community.
--GET /api/get/my_recipe/: Retrieve your recipes.
--POST /api/post/my_recipe/: Create a new recipe.
--POST /api/search/dish/: Search for a dish using chatbot integration.
--POST /api/filtered/dish/: Get custom recipes based on specific criteria.
+- **POST /api/signin/: Register a new user.
+- **POST /api/login/: Log in as an existing user.
+- **POST /api/logout/: Log out from the application.
+- **GET /api/get/community/: Get a list of communities.
+- **POST /api/post/community/: Create a new community.
+- **GET /api/get/my_recipe/: Retrieve your recipes.
+- **POST /api/post/my_recipe/: Create a new recipe.
+- **POST /api/search/dish/: Search for a dish using chatbot integration.
+- **POST /api/filtered/dish/: Get custom recipes based on specific criteria.
 
 ## Technology Stack
 
