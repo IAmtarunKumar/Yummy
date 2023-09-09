@@ -158,17 +158,15 @@ export default {
       };
 
       console.log(recipeData)
-      axios.post('https://django-chack.onrender.com/api/search/dish/', recipeData)
+      axios.post('https://django-chack.onrender.com/search/', recipeData)
         .then((response) => {
-          if (response.status === 201) {
+          
             // let data = response.data
             console.log('successfull:', response.data);
           
             this.mydata = response.data.gpt3_output
             // console.log(this.mydata)
-          } else {
-            alert("error")
-          }
+       
         })
         .catch((error) => {
           console.error('Error creating gpt:', error);

@@ -32,7 +32,7 @@
   
     methods: {
       createRecipe() {
-        axios.get('https://django-chack.onrender.com/api/get/my_recipe/')
+        axios.get('https://django-chack.onrender.com/api/get/my_recipe/get/')
           .then((response) => {
             if (response.status === 200) {
               console.log('Recipes retrieved successfully:', response.data);
