@@ -19,8 +19,11 @@
   
   ## Deployed App
   
-  - <b>Backend</b>: [https://backend.yummy.com](https://django-chack.onrender.com)
-  - <b>Frontend</b>: [https://frontend.yummy.com](https://frontend.yummy.com)
+  - <b>Backend</b>: <a href="https://django-chack.onrender.com" target="_blank">Live Site
+                                </a>
+
+  - <b>Frontend</b>: <a href="https://yummy-com.netlify.app" target="_blank">Live Site
+                                </a>
   
   ## Video Walkthrough
   
